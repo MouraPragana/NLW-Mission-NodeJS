@@ -10,6 +10,16 @@ const app = express();
  * PATCH    => Alterar uma informação específica - Alterar somente a senha por exemplo.
  */
 
+/** Tipos de parâmetros
+ *  Routes Params => http://localhost:3000/produtos/454012 => app.get('test/{id}') => const id = req.params.id
+ *  Query Params (parâmetros não obrigatórios) => http://localhost:3000/produtos?name=teclado&description=tecladobom
+ * 
+ *  Body Params (post, put, patch) => {
+ *      "name": "teclado",
+ *      "description": "teclado bom"
+ * }
+ */
+
 app.get("/test", (request, response) => {
     // Request => Entrando.
     // Response => Saindo.
