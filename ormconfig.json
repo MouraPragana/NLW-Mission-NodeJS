@@ -7,6 +7,7 @@
     "migrations": ["src/database/migrations/*.ts"],
     "database": "nlwValoriza",
     "cli": {
-        "migrationsDir": "src/database/migrations"
+        "migrationsDir": "src/database/migrations",
+        "entitiesDir": "src/entities"
     }
 }
