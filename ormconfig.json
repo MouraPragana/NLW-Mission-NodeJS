@@ -5,6 +5,7 @@
     "username": "postgres",
     "password": "admin",
     "migrations": ["src/database/migrations/*.ts"],
+    "entities": ["src/entities/*.ts"],
     "database": "nlwValoriza",
     "cli": {
         "migrationsDir": "src/database/migrations",
