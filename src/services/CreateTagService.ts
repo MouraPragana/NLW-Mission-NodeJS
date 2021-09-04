@@ -29,7 +29,7 @@ class CreateTagService {
         await tagRepository.save(tag);
 
         return tag;
-    }
-}
+    };
+};
 
 export { CreateTagService }
