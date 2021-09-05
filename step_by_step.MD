@@ -1,3 +1,6 @@
+### Links Úteis 
+1 - https://www.md5hashgenerator.com/
+
 ### Iniciando o Projeto
 1 - yarn init -y
 2 - yarn add typescript -D
