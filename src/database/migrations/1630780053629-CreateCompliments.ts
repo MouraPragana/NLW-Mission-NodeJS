@@ -9,20 +9,20 @@ export class CreateCompliments1630780053629 implements MigrationInterface {
                 columns: [
                     {
                         name: "id",
-                        type: "uuid",
+                        type: "UNIQUEIDENTIFIER",
                         isPrimary: true
                     },
                     {
                         name:"user_sender",
-                        type:"uuid"
+                        type:"UNIQUEIDENTIFIER"
                     },
                     {
                         name:"user_receiver",
-                        type:"uuid"
+                        type:"UNIQUEIDENTIFIER"
                     },
                     {
                         name:"tag_id",
-                        type:"uuid"
+                        type:"UNIQUEIDENTIFIER"
                     },
                     {
                         name:"message",
@@ -30,8 +30,8 @@ export class CreateCompliments1630780053629 implements MigrationInterface {
                     },
                     {
                         name:"created_at",
-                        type:"timestamp",
-                        default:"now()"
+                        type:"datetime",
+                        default:"GETDATE()"
                     }
                 ],
                 foreignKeys: [
@@ -40,24 +40,24 @@ export class CreateCompliments1630780053629 implements MigrationInterface {
                         referencedTableName: "users",
                         referencedColumnNames: ["id"],
                         columnNames: ["user_sender"],
-                        onDelete: "SET NULL",
-                        onUpdate: "SET NULL"
+                        onDelete: "NO ACTION",
+                        onUpdate: "CASCADE"
                     },
                     {
                         name: "FKUserReceiverCompliments",
                         referencedTableName: "users",
                         referencedColumnNames: ["id"],
                         columnNames: ["user_receiver"],
-                        onDelete: "SET NULL",
-                        onUpdate: "SET NULL"
+                        onDelete: "NO ACTION",
+                        onUpdate: "NO ACTION"
                     },
                     {
                         name: "FKTagCompliments",
                         referencedTableName: "tags",
                         referencedColumnNames: ["id"],
                         columnNames: ["tag_id"],
-                        onDelete: "SET NULL",
-                        onUpdate: "SET NULL"
+                        onDelete: "NO ACTION",
+                        onUpdate: "CASCADE"
                     }
                 ]
             })

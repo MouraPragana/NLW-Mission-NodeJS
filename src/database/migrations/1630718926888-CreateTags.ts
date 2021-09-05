@@ -9,7 +9,7 @@ export class CreateTags1630718926888 implements MigrationInterface {
                 columns: [
                     {
                         name: "id",
-                        type:"uuid",
+                        type:"UNIQUEIDENTIFIER",
                         isPrimary:true
                     },
                     {
@@ -18,13 +18,13 @@ export class CreateTags1630718926888 implements MigrationInterface {
                     },
                     {
                         name:"created_at",
-                        type:"timestamp",
-                        default:"now()"
+                        type:"datetime",
+                        default:"GETDATE()"
                     },
                     {
                         name:"updated_at",
-                        type:"timestamp",
-                        default:"now()"
+                        type:"datetime",
+                        default:"GETDATE()"
                     }
                 ]
             })

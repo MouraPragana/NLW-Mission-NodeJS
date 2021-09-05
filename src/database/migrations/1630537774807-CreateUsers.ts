@@ -9,7 +9,7 @@ export class CreateUsers1630537774807 implements MigrationInterface {
                 columns: [
                     {
                         name: "id",
-                        type: "uuid",
+                        type: "UNIQUEIDENTIFIER",
                         isPrimary: true
                     },
                     {
@@ -22,18 +22,19 @@ export class CreateUsers1630537774807 implements MigrationInterface {
                     },
                     {
                         name: "admin",
-                        type: "boolean",
-                        default: false
+                        type: "bit",
+                        default: 0,
+                        isNullable: false
                     },
                     {
                         name: "created_at",
-                        type: "timestamp",
-                        default: "now()"
+                        type: "datetime",
+                        default: "GETDATE()"
                     },
                     {
                         name: "updated_at",
-                        type: "timestamp",
-                        default: "now()"
+                        type: "datetime",
+                        default: "GETDATE()"
                     }
                 ]
             })
